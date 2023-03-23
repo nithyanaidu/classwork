@@ -1,0 +1,16 @@
+matrix = [[1, 4, 3],
+          [4, 2, 6],
+          [7, 1, 3]]
+
+n = len(matrix)
+sum_diagonal = 0
+
+print("Diagonal Elements are ", end="")
+for i in range(n):
+    print(matrix[i][i], end=" ")
+    sum_diagonal += matrix[i][i]
+
+print("\nSum of diagonal elements = ", sum_diagonal)
+output
+Diagonal Elements are 1 2 3 
+Sum of diagonal elements = 6
