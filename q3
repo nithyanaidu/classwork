@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int kthSmallest(int arr[], int n, int k)
+{
+    // Sort the array
+ 
+    // Return the kth smallest element
+    return arr[k-1];
+}
+
+int cmpfunc(const void * a, const void * b) {
+   return ( *(int*)a - *(int*)b );
+}
+
+int main()
+{
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int k = 3;
+    printf("Kth smallest element is %d\n", kthSmallest(arr, n, k));
+    return 0;
+}
+output
+Kth smallest element is 8
