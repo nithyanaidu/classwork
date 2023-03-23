@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int num, i = 1, sum = 0;
+    
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+    
+    while (i <= num) {
+        sum += i;
+        i++;
+    }
+    
+    printf("The sum of natural numbers from 1 to %d is %d.", num, sum);
+    
+    return 0;
+    outout
+    /tmp/CeZpZcamkg.o
+Enter a positive integer: 1
+\The sum of natural numbers from 1 to 1 is 1.
