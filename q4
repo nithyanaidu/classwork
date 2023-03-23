@@ -1,0 +1,24 @@
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+arr = [28, 12, 15, 122, 10, 33, 11]
+target = 15
+
+result = binary_search(arr, target)
+
+if result == -1:
+    print("Given element is not found in the array.")
+else:
+    print(f"Given element {target} is found at {result+1}th position.")
+output
+Given element 15 is found at 3th position.
