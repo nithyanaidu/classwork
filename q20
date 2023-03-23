@@ -1,0 +1,8 @@
+output
+# Program to print even numbers between 0 and 10 using continue statement
+
+for num in range(0, 11):
+    if num % 2 != 0:
+        continue
+    print(num)
+output
