@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+struct address {
+    char street[50];
+    char city[50];
+    char state[50];
+    char zip[10];
+};
+
+struct student {
+    char name[50];
+    int age;
+    float gpa;
+    struct address addr;
+};
+
+int main() {
+    struct student s;
+    
+    printf("Enter student name: ");
+    scanf("%s", s.name);
+    
+    printf("Enter student age: ");
+    scanf("%d", &s.age);
+    
+    printf("Enter student GPA: ");
+    scanf("%f", &s.gpa);
+    
+    printf("Enter student address:\n");
+    printf("Street: ");
+    scanf("%s", s.addr.street);
+    printf("City: ");
+    scanf("%s", s.addr.city);
+    printf("State: ");
+    scanf("%s", s.addr.state);
+    printf("Zip code: ");
+    scanf("%s", s.addr.zip);
+    
+    printf("\nStudent details:\n");
+    printf("Name: %s\n", s.name);
+    printf("Age: %d\n", s.age);
+    printf("GPA: %.2f\n", s.gpa);
+    printf("Address: %s, %s, %s %s\n", s.addr.street, s.addr.city, s.addr.state, s.addr.zip);
+    
+    return 0;
+}
+output
+Enter student name: John Smith
+Enter student age: 20
+Enter student GPA: 3.75
+Enter student address:
+Street: 123 Main St.
+City: Anytown
+State: CA
+Zip code: 12345
+
+Student details:
+Name: John Smith
+Age: 20
+GPA: 3.75
+Address: 123 Main St., Anytown, CA 12345
