@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+struct Student {
+    int number;
+    char grade;
+};
+
+void printStudentDetails(Student s, int& numA, int& numB, int& numC, int& numD, int& numF) {
+    cout << "Student details:" << endl;
+    cout << "Number: " << s.number << endl;
+    cout << "Grade: " << s.grade << endl;
+    switch (s.grade) {
+        case 'A':
+            numA++;
+            break;
+        case 'B':
+            numB++;
+            break;
+        case 'C':
+            numC++;
+            break;
+        case 'D':
+            numD++;
+            break;
+        case 'F':
+            numF++;
+            break;
+        default:
+            cout << "Invalid grade" << endl;
+            break;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter number of students: ";
+    cin >> n;
+    Student students[n];
+    int numA = 0, numB = 0, numC = 0, numD = 0, numF = 0;
+    for (int i = 0; i < n; i++) {
+        cout << "Enter student " << i+1 << " number and grade: ";
+        cin >> students[i].number >> students[i].grade;
+        printStudentDetails(students[i], numA, numB, numC, numD, numF);
+    }
+    cout << "Total number of A's: " << numA << endl;
+    cout << "Total number of B's: " << numB << endl;
+    cout << "Total number of C's: " << numC << endl;
+    cout << "Total number of D's: " << numD << endl;
+    cout << "Total number of F's: " << numF << endl;
+    return 0;
+}
+output
+Enter number of students: 1
+Enter student 1 number and grade: 2001 A
+Student details:
+Number: 2001
+Grade: A
+Total number of A's: 1
+Total number of B's: 0
+Total number of C's: 0
+Total number of D's: 0
+Total number of F's: 0
