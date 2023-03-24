@@ -1,0 +1,33 @@
+def is_prime(num):
+    """
+    A helper function to check whether a number is prime or not.
+    """
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+n = int(input("Enter the value of n: "))
+
+prime_numbers = []
+count = 0
+num = 2
+
+while count < n:
+    if is_prime(num):
+        prime_numbers.append(num)
+        count += 1
+    num += 1
+
+nth_prime = prime_numbers[-1]
+print(f"{n}th Prime number is {nth_prime}")
+
+print(f"{n} prime numbers after {nth_prime} are: ", end="")
+for i in range(n):
+    print(prime_numbers[-1] + i + 1, end=" ")
+output
+Enter the value of n: 3
+3th Prime number is 5
+3 prime numbers after 5 are: 7 11 13
