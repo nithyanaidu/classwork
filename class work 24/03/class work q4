@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    const int num = 5;
+    int *ptr = (int*)&num; // Create a pointer to the constant variable
+
+    printf("Before modification: num = %d\n", num);
+
+    *ptr = 10; // Use the pointer to modify the value of num
+
+    printf("After modification: num = %d\n", num);
+
+    return 0;
+}
+output
+Before modification: num = 5
+After modification: num = 10
