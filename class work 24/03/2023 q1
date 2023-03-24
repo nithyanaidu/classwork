@@ -1,0 +1,32 @@
+# get the marks for each subject
+python_marks = int(input("Enter the marks in python: "))
+c_marks = int(input("Enter the marks in c programming: "))
+maths_marks = int(input("Enter the marks in Mathematics: "))
+physics_marks = int(input("Enter the marks in Physics: "))
+
+# calculate the total marks and aggregate
+total_marks = python_marks + c_marks + maths_marks + physics_marks
+aggregate = total_marks / 4.0
+
+# display the total marks and aggregate
+print("Total=", total_marks)
+print("Aggregate =", aggregate)
+
+# determine the grade based on the aggregate
+if aggregate >= 75:
+    print("DISTINCTION")
+elif 60 <= aggregate < 75:
+    print("First Division")
+elif 50 <= aggregate < 60:
+    print("Second Division")
+elif 40 <= aggregate < 50:
+    print("Third Division")
+else:
+    print("Fail")
+Enter the marks in python: 90
+Enter the marks in c programming: 91
+Enter the marks in Mathematics: 92
+Enter the marks in Physics: 93
+Total= 366
+Aggregate = 91.5
+DISTINCTION
