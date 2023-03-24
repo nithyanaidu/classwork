@@ -1,0 +1,11 @@
+def add_numbers():
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    sum = num1 + num2
+    print("The sum of", num1, "and", num2, "is", sum)
+
+add_numbers()
+output
+Enter the first number: 5
+Enter the second number: 7
+The sum of 5 and 7 is 12
