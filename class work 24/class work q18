@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h>
+
+struct book {
+    char title[50];
+    char author[50];
+    int year;
+};
+
+int main() {
+    struct book books[3];
+    int i;
+
+    // Populate the array of structures
+    for (i = 0; i < 3; i++) {
+        printf("Enter title of book %d: ", i+1);
+        fgets(books[i].title, 50, stdin);
+        books[i].title[strcspn(books[i].title, "\n")] = 0; // Remove trailing newline character
+
+        printf("Enter author of book %d: ", i+1);
+        fgets(books[i].author, 50, stdin);
+        books[i].author[strcspn(books[i].author, "\n")] = 0;
+
+        printf("Enter year of book %d: ", i+1);
+        scanf("%d", &books[i].year);
+        getchar(); // Consume the newline character left in the input buffer by scanf
+    }
+
+    // Print the array of structures
+    printf("\n\nBook records:\n");
+    for (i = 0; i < 3; i++) {
+        printf("Book %d:\n", i+1);
+        printf("Title: %s\n", books[i].title);
+        printf("Author: %s\n", books[i].author);
+        printf("Year: %d\n", books[i].year);
+    }
+
+    return 0;
+}
+output
+Enter title of book 1: the great competer
+Enter author of book 1: F. Scott Fitzgerald
+Enter year of book 1: 1762
+Enter title of book 2: the gret hero 
+Enter author of book 2: f . nithya 
+Enter year of book 2: 1756
+Enter title of book 3: the competer
+Enter author of book 3: obuieshu
+Enter year of book 3: 2003
+Book records:
+Book 1:
+Title: the great competer
+Author: F. Scott Fitzgerald
+Year: 1762
+Book 2:
+Title: the gret hero 
+Author: f . nithya 
+Year: 1756
+Book 3:
+Title: the competer
+Author: obuieshu
+Year: 2003
