@@ -1,0 +1,15 @@
+def add_numbers(num1, num2):
+    sum = num1 + num2
+    return sum
+
+# Taking user input
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Calling the function and printing the result
+result = add_numbers(num1, num2)
+print("The sum of {0} and {1} is {2}".format(num1, num2, result))
+output
+Enter the first number: 5
+Enter the second number: 10
+The sum of 5 and 10 is 15
